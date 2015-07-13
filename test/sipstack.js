@@ -11,7 +11,6 @@ describe('sipstack', function() {
     test.createCore('urlconfig');
     test.createCore('cookieconfig');
     createModel();
-    test.mockWebRTC();
   });
 
   it('RTCMediaHandlerOptions and bandwidth med change', function() {

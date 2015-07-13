@@ -211,5 +211,7 @@ module.exports = function(test) {
       ExSIP.WebRTC.isSupported = true;
       ExSIP.UA.prototype.recoverTransport = function() {}
     };
+
+    test.mockWebRTC();
     return test;
   };
