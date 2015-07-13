@@ -1,0 +1,30 @@
+{
+  "name": "webrtc-sipstack",
+  "version": "0.0.1",
+  "description": "sipstack module for webrtc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "exsip": "broadsoftxtended/ExSIP.git#cjs"
+  },
+  "devDependencies": {
+    "webrtc-core": "git+ssh://git.broadsoftlabs.net:7922/wrtc/webrtc-core.git",
+    "templatizer": "1.2.1",
+    "mocha": "2.1.0",
+    "jsdom": "3.1.0",
+    "mocha-jsdom": "0.2.0",
+    "expect": "1.6.0",
+    "mocha-bamboo-reporter": "1.0.6",
+    "stylus": "^0.48.1",
+    "cssmin": "0.4.2",
+    "stylus-font-face": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.broadsoftlabs.net:7922/wrtc/sipstack.git"
+  },
+  "author": "Dominik Steiner",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+module.exports = {model: require('./lib/models/sipstack')};
