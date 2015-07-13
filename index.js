@@ -1,1 +1,1 @@
-module.exports = {model: require('./lib/models/sipstack')};
+module.exports = {model: require('./lib/models/sipstack'), exsip: require('exsip')};

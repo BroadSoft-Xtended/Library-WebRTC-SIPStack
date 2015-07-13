@@ -1,29 +1,24 @@
-var jsdom = require('mocha-jsdom');
-expect = require('expect');
-jsdom({});
-
+var test = require('./includes/common');
 describe('sipstack', function() {
 
   var createModel = function() {
-    testUA.createModelAndView('sipstack', {
+    test.createModelAndView('sipstack', {
         sipstack: require('../')
     });
   };
 
   beforeEach(function() {
-    core = require('webrtc-core');
-    testUA = core.testUA;
-    testUA.createCore('urlconfig');
-    testUA.createCore('cookieconfig');
+    test.createCore('urlconfig');
+    test.createCore('cookieconfig');
     createModel();
-    testUA.mockWebRTC();
+    test.mockWebRTC();
   });
 
   it('RTCMediaHandlerOptions and bandwidth med change', function() {
     sipstack.ua.setRtcMediaHandlerOptions = function(options) {
       rtcMediaHandlerOptions = options;
     }
-    sipstack.encodingResolution = core.constants.R_640x360;
+    sipstack.encodingResolution = '640x360';
     sipstack.bandwidthMed =  "600";
     expect(sipstack.encodingResolution).toEqual('640x360');
     expect(rtcMediaHandlerOptions).toEqual({
@@ -41,7 +36,7 @@ describe('sipstack', function() {
       rtcMediaHandlerOptions = options;
     }
     sipstack.bandwidthLow = "200";
-    sipstack.encodingResolution = core.constants.R_320x180;
+    sipstack.encodingResolution = '320x180';
     expect(rtcMediaHandlerOptions).toEqual({
       RTCConstraints: {
         'optional': [],
@@ -206,7 +201,7 @@ describe('sipstack', function() {
   it('register with cookieconfig.userid', function() {
     cookieconfig.userid = '12345';
     expect(sipstack.getExSIPConfig("1509", false).register).toEqual(true);
-    testUA.connect();
+    test.connect();
     sipstack.ua.emit('registered', sipstack.ua);
     expect(sipstack.registered).toEqual(true, "should have received registered from UA");
     cookieconfig.userid = null;
@@ -214,8 +209,8 @@ describe('sipstack', function() {
   it('register with cookieconfig.userid and wrong user', function() {
     cookieconfig.userid = 'wronguserid';
     expect(sipstack.getExSIPConfig("1509", false).register).toEqual(true);
-    testUA.connect();
-    testUA.registrationFailed(404);
+    test.connect();
+    test.registrationFailed(404);
     expect(sipstack.registrationStatus).toEqual('404', "should have received registrationFailed 404 from UA");
     cookieconfig.userid = null;
   });

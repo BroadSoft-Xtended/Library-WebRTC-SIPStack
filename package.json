@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "exsip": "broadsoftxtended/ExSIP.git#cjs"
+    "exsip": "BroadSoft-Xtended/Library-ExSIP#cjs"
   },
   "devDependencies": {
-    "webrtc-core": "git+ssh://git.broadsoftlabs.net:7922/wrtc/webrtc-core.git",
+    "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
     "templatizer": "1.2.1",
     "mocha": "2.1.0",
     "jsdom": "3.1.0",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.broadsoftlabs.net:7922/wrtc/sipstack.git"
+    "url": "ssh://git@github.com:BroadSoft-Xtended/Library-WebRTC-SIPStack.git"
   },
   "author": "Dominik Steiner",
   "license": "ISC"
