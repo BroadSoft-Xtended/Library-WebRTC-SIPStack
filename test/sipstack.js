@@ -1,4 +1,4 @@
-var test = require('./includes/common');
+var test = require('./includes/common')(require('../node_modules/webrtc-core/test/includes/common'));
 describe('sipstack', function() {
 
   var createModel = function() {
