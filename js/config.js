@@ -4,6 +4,7 @@ module.exports = {
     enableIms: false,
     enableAutoAnswer: false,
     enableDatachannel: false,
+    endCallURL: false,
 	encodingResolution: '640x480',
     websocketsServers: [{'ws_uri':'wss://webrtc-gw.broadsoftlabs.com:8443', 'weight':0}],
     stunServer: 'stun.broadsoftlabs.com',

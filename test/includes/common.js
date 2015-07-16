@@ -24,7 +24,7 @@ module.exports = function(test) {
 
     test.connectAndStartCall = function() {
       this.connect();
-      this.startCall();
+      return this.startCall();
     };
 
     test.connect = function() {
@@ -127,6 +127,12 @@ module.exports = function(test) {
     test.createSession = function() {
       var ExSIP = require('exsip')
       var session = new ExSIP.RTCSession(sipstack.ua);
+      session.sendDTMF = function(tone) {
+        session.emit('newDTMF', session, {
+          originator: 'local',
+          tone: tone
+        });
+      }
       session.hold = function(success) {
         session.held();
         if (success) {
