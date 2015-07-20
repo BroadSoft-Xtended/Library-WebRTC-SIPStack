@@ -217,4 +217,8 @@ describe('sipstack', function() {
     sipstack.userid = '';
     expect(sipstack.getExSIPConfig("1509", "4009").register).toEqual(false);
   });
+  it('cookieconfig.bandwidth', function() {
+    cookieconfig.bandwidthLow = '333';
+    expect(sipstack.bandwidthLow).toEqual(333);
+  });
 });
