@@ -32,6 +32,8 @@ audioOnly                |boolean  |false                                       
 debug                    |debug    |false                                                                |True if debug logs should be displayed in the console.
 disableICE               |boolean  |true                                                                 |True if ICE should be disabled.
 domainFrom               |string   |broadsoftlabs.com                                                    |Appended to the SIP URI if no domain was specified for userId or networkUserId.
+dtmfDuration               |number   |500                                                    			|Duration of DTMF tone in milli seconds.
+dtmfInterToneGap         |number   |500                                                    			|Inter tone gap of DTMF tone in milli seconds.
 enableAutoAnswer         |boolean  |false                                                                |True if an incoming call should be automatically answered.
 enable ConnectLocalMedia  |boolean  |true                                                                 |True if the users microphone and/or video should be accessed before a call already.
 enabled                  |boolean  |true                                                                 |True if the sipstack is enabled

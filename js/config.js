@@ -18,5 +18,7 @@ module.exports = {
     audioOnly: false,
     offerToReceiveVideo: true,
     networkUserId: false,
-    debug: false
+    debug: false,
+    dtmfDuration: 500,
+    dtmfInterToneGap: 100
 }
