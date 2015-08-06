@@ -1,6 +1,12 @@
 var test = require('./includes/common')(require('../node_modules/webrtc-core/test/includes/common'));
 describe('sipstack', function() {
 
+  var createModels = function() {
+    test.createCore('urlconfig');
+    test.createCore('cookieconfig');
+    createModel();
+  };
+
   var createModel = function() {
     test.createModelAndView('sipstack', {
         sipstack: require('../')
@@ -8,9 +14,7 @@ describe('sipstack', function() {
   };
 
   beforeEach(function() {
-    test.createCore('urlconfig');
-    test.createCore('cookieconfig');
-    createModel();
+    createModels();
   });
 
   it('RTCMediaHandlerOptions and bandwidth med change', function() {
@@ -181,6 +185,13 @@ describe('sipstack', function() {
     sipstack.networkUserId = '8323303809';
     expect(sipstack.ua.configuration.authorization_user).toEqual('8323303809', "networkUserId takes precendence over userid");
     sipstack.networkUserId = false;
+  });
+  it('urlconfig.view = audioOnly', function() {
+    location.search = '?view=audioOnly';
+    createModels();
+    expect(sipstack.offerToReceiveVideo).toEqual(false);
+    urlconfig.view = 'audioVideo'
+    expect(sipstack.offerToReceiveVideo).toEqual(true);
   });
   it('enableConnectLocalMedia', function() {
     expect(sipstack.enableConnectLocalMedia).toEqual(true);
