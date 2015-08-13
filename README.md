@@ -2,7 +2,7 @@
 
 Integrates the ExSIP library.
 
-Model : bdsft_webrtc.default.sipstack
+Namespace : bdsft_webrtc.default.sipstack
 
 Dependencies : [ExSIP](https://github.com/BroadSoft-Xtended/Library-ExSIP)
 
