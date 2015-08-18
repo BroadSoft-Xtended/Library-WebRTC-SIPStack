@@ -28,7 +28,6 @@ userMediaFailed     |boolean          |True if the user's local media stream cou
 
 Property                 |Type     |Default                                                              |Description
 -------------------------|---------|---------------------------------------------------------------------|------------------------------------------------------------
-audioOnly                |boolean  |false                                                                |True if no video should be sent.
 debug                    |debug    |false                                                                |True if debug logs should be displayed in the console.
 disableICE               |boolean  |true                                                                 |True if ICE should be disabled.
 domainFrom               |string   |broadsoftlabs.com                                                    |Appended to the SIP URI if no domain was specified for userId or networkUserId.
@@ -42,8 +41,10 @@ enableIms                |boolean  |false                                       
 encodingResolution       |string   |640x480                                                              |The encoding resolution to be used on a call.
 endCallURL               |string   |false                                                                |Where to send the browser at the end of a call.
 networkUserId            |string   |false                                                                |The SIP User ID used for non registered calling.
-offer ToReceiveVideo      |boolean  |true                                                                 |True if video should be received.
+receiveVideo		      |boolean  |true                                                                 |True if video should be received.
 pAssertedIdentity        |string   |<sip:webguest @broadsoftlabs.com\>                                     |The P-Asserted-Identity SIP header.
+sendAudio                |boolean  |true                                                                |True if audio should be sent.
+sendVideo                |boolean  |true                                                                |True if video should be sent.
 stunPort                 |number   |3478                                                                 |The STUN server port.
 stunServer               |string   |stun.broadsoftlabs.com                                               |The STUN server address.
 websockets Servers        |array    |[\{'ws_uri':'wss://webrtc-gw.broadsoftlabs.com:8443', 'weight': 0}]  |The WRS address and weight within the array.

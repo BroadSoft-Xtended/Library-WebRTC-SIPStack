@@ -189,9 +189,9 @@ describe('sipstack', function() {
   it('urlconfig.view = audioOnly', function() {
     location.search = '?view=audioOnly';
     createModels();
-    expect(sipstack.offerToReceiveVideo).toEqual(false);
+    expect(sipstack.receiveVideo).toEqual(false);
     urlconfig.view = 'audioVideo'
-    expect(sipstack.offerToReceiveVideo).toEqual(true);
+    expect(sipstack.receiveVideo).toEqual(true);
   });
   it('enableConnectLocalMedia', function() {
     expect(sipstack.enableConnectLocalMedia).toEqual(true);
