@@ -9,12 +9,12 @@
   "dependencies": {
     "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
     "exsip": "BroadSoft-Xtended/Library-ExSIP#cjs",
-    "bdsft-sdk-model": "BroadSoft-Xtended/Library-WebRTC-Model.git",
-    "bdsft-sdk-eventbus": "BroadSoft-Xtended/Library-WebRTC-Eventbus.git",
-    "bdsft-sdk-debug": "BroadSoft-Xtended/Library-WebRTC-Debug.git"
+    "bdsft-sdk-model": "BroadSoft-Xtended/Library-SDK-Model.git",
+    "bdsft-sdk-eventbus": "BroadSoft-Xtended/Library-SDK-Eventbus.git",
+    "bdsft-sdk-debug": "BroadSoft-Xtended/Library-SDK-Debug.git"
   },
   "devDependencies": {
-    "bdsft-sdk-test": "BroadSoft-Xtended/Library-WebRTC-Test.git"
+    "bdsft-sdk-test": "BroadSoft-Xtended/Library-SDK-Test.git"
   },
   "repository": {
     "type": "git",
