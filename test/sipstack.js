@@ -1,15 +1,22 @@
-var test = require('./includes/common')(require('../node_modules/webrtc-core/test/includes/common'));
+var test = require('./includes/common')(require('../node_modules/bdsft-sdk-test/lib/common'));
 describe('sipstack', function() {
 
   var createModels = function() {
-    test.createCore('urlconfig');
-    test.createCore('cookieconfig');
+    test.createModelAndView('core', {
+      core: require('webrtc-core')
+    }, 'urlconfig');
+    test.createModelAndView('core', {
+      core: require('webrtc-core')
+    }, 'cookieconfig');
     createModel();
   };
 
   var createModel = function() {
     test.createModelAndView('sipstack', {
-        sipstack: require('../')
+        sipstack: require('../'),
+        eventbus: require('bdsft-sdk-eventbus'),
+        debug: require('bdsft-sdk-debug'),
+        core: require('webrtc-core')
     });
   };
 

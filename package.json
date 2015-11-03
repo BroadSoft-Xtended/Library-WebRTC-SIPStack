@@ -7,19 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "exsip": "BroadSoft-Xtended/Library-ExSIP#cjs"
+    "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
+    "exsip": "BroadSoft-Xtended/Library-ExSIP#cjs",
+    "bdsft-sdk-model": "BroadSoft-Xtended/Library-WebRTC-Model.git",
+    "bdsft-sdk-eventbus": "BroadSoft-Xtended/Library-WebRTC-Eventbus.git",
+    "bdsft-sdk-debug": "BroadSoft-Xtended/Library-WebRTC-Debug.git"
   },
   "devDependencies": {
-    "webrtc-core": "BroadSoft-Xtended/Library-WebRTC-Core.git",
-    "templatizer": "1.2.1",
-    "mocha": "2.1.0",
-    "jsdom": "3.1.0",
-    "mocha-jsdom": "0.2.0",
-    "expect": "1.6.0",
-    "mocha-bamboo-reporter": "1.0.6",
-    "stylus": "^0.48.1",
-    "cssmin": "0.4.2",
-    "stylus-font-face": "1.0.0"
+    "bdsft-sdk-test": "BroadSoft-Xtended/Library-WebRTC-Test.git"
   },
   "repository": {
     "type": "git",
